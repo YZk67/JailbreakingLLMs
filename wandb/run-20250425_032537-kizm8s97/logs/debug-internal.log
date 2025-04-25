@@ -1,0 +1,15 @@
+{"time":"2025-04-25T03:25:37.622496-07:00","level":"INFO","msg":"stream: starting","core version":"0.19.9","symlink path":"D:\\vsCode\\code\\JailbreakingLLMs\\wandb\\run-20250425_032537-kizm8s97\\logs\\debug-core.log"}
+{"time":"2025-04-25T03:25:37.8593437-07:00","level":"INFO","msg":"created new stream","id":"kizm8s97"}
+{"time":"2025-04-25T03:25:37.8598793-07:00","level":"INFO","msg":"stream: started","id":"kizm8s97"}
+{"time":"2025-04-25T03:25:37.8598793-07:00","level":"INFO","msg":"handler: started","stream_id":"kizm8s97"}
+{"time":"2025-04-25T03:25:37.8598793-07:00","level":"INFO","msg":"sender: started","stream_id":"kizm8s97"}
+{"time":"2025-04-25T03:25:37.8598793-07:00","level":"INFO","msg":"writer: Do: started","stream_id":"kizm8s97"}
+{"time":"2025-04-25T03:25:38.0432882-07:00","level":"INFO","msg":"Starting system monitor"}
+{"time":"2025-04-25T03:25:53.1543875-07:00","level":"INFO","msg":"stream: closing","id":"kizm8s97"}
+{"time":"2025-04-25T03:25:53.1543875-07:00","level":"INFO","msg":"Stopping system monitor"}
+{"time":"2025-04-25T03:25:53.1543875-07:00","level":"INFO","msg":"Stopped system monitor"}
+{"time":"2025-04-25T03:25:53.701492-07:00","level":"INFO","msg":"fileTransfer: Close: file transfer manager closed"}
+{"time":"2025-04-25T03:25:53.8769356-07:00","level":"INFO","msg":"handler: closed","stream_id":"kizm8s97"}
+{"time":"2025-04-25T03:25:53.8769356-07:00","level":"INFO","msg":"writer: Close: closed","stream_id":"kizm8s97"}
+{"time":"2025-04-25T03:25:53.8769356-07:00","level":"INFO","msg":"sender: closed","stream_id":"kizm8s97"}
+{"time":"2025-04-25T03:25:53.8769356-07:00","level":"INFO","msg":"stream: closed","id":"kizm8s97"}

@@ -1,0 +1,62 @@
+
+[1;31mGive Feedback / Get Help: https://github.com/BerriAI/litellm/issues/new[0m
+LiteLLM.Info: If you need to debug this error, use `litellm.set_verbose=True'.
+
+
+[1;31mGive Feedback / Get Help: https://github.com/BerriAI/litellm/issues/new[0m
+LiteLLM.Info: If you need to debug this error, use `litellm.set_verbose=True'.
+
+
+[1;31mGive Feedback / Get Help: https://github.com/BerriAI/litellm/issues/new[0m
+LiteLLM.Info: If you need to debug this error, use `litellm.set_verbose=True'.
+Traceback (most recent call last):
+  File "C:\Users\Yi\AppData\Local\Programs\Python\Python312\Lib\site-packages\litellm\main.py", line 1302, in completion
+    model_response = together_ai.completion(
+                     ^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Yi\AppData\Local\Programs\Python\Python312\Lib\site-packages\litellm\llms\together_ai.py", line 194, in completion
+    elif "error" in completion_response["output"]:
+                    ~~~~~~~~~~~~~~~~~~~^^^^^^^^^^
+KeyError: 'output'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\vsCode\code\JailbreakingLLMs\main.py", line 217, in <module>
+    main(args)
+  File "D:\vsCode\code\JailbreakingLLMs\main.py", line 40, in main
+    extracted_attack_list = attackLM.get_attack(convs_list, processed_response_list)
+                            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\vsCode\code\JailbreakingLLMs\conversers.py", line 144, in get_attack
+    valid_outputs, new_adv_prompts = self._generate_attack(processed_convs_list, init_message)
+                                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\vsCode\code\JailbreakingLLMs\conversers.py", line 98, in _generate_attack
+    outputs_list = self.model.batched_generate(convs_subset,
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\vsCode\code\JailbreakingLLMs\language_models.py", line 76, in batched_generate
+    outputs = litellm.batch_completion(
+              ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Yi\AppData\Local\Programs\Python\Python312\Lib\site-packages\litellm\main.py", line 1968, in batch_completion
+    results = [future.result() for future in completions]
+               ^^^^^^^^^^^^^^^
+  File "C:\Users\Yi\AppData\Local\Programs\Python\Python312\Lib\concurrent\futures\_base.py", line 449, in result
+    return self.__get_result()
+           ^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Yi\AppData\Local\Programs\Python\Python312\Lib\concurrent\futures\_base.py", line 401, in __get_result
+    raise self._exception
+  File "C:\Users\Yi\AppData\Local\Programs\Python\Python312\Lib\concurrent\futures\thread.py", line 58, in run
+    result = self.fn(*self.args, **self.kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Yi\AppData\Local\Programs\Python\Python312\Lib\site-packages\litellm\utils.py", line 2171, in wrapper
+    raise e
+  File "C:\Users\Yi\AppData\Local\Programs\Python\Python312\Lib\site-packages\litellm\utils.py", line 2078, in wrapper
+    result = original_function(*args, **kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Yi\AppData\Local\Programs\Python\Python312\Lib\site-packages\litellm\main.py", line 1806, in completion
+    raise exception_type(
+          ^^^^^^^^^^^^^^^
+  File "C:\Users\Yi\AppData\Local\Programs\Python\Python312\Lib\site-packages\litellm\utils.py", line 6673, in exception_type
+    raise e
+  File "C:\Users\Yi\AppData\Local\Programs\Python\Python312\Lib\site-packages\litellm\utils.py", line 6435, in exception_type
+    request=original_exception.getattr(e, "request", None),
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: 'KeyError' object has no attribute 'getattr'

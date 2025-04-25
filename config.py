@@ -18,6 +18,7 @@ class Model(Enum):
     claude_2 = "claude-2.1"
     gemini = "gemini-pro"
     mixtral = "mixtral"
+    gpt_4o = "gpt-4o"
 
 MODEL_NAMES = [model.value for model in Model]
 
@@ -43,6 +44,7 @@ FASTCHAT_TEMPLATE_NAMES: dict[Model, str] = {
     Model.vicuna: "vicuna_v1.1",
     Model.llama_2: "llama-2-7b-chat-hf",
     Model.mixtral: "mixtral",
+    Model.gpt_4o: "gpt-4o",
 }
 
 API_KEY_NAMES: dict[Model, str] = {
@@ -54,6 +56,7 @@ API_KEY_NAMES: dict[Model, str] = {
     Model.vicuna:   "TOGETHER_API_KEY",
     Model.llama_2:  "TOGETHER_API_KEY",
     Model.mixtral:  "TOGETHER_API_KEY",
+    Model.gpt_4o:   "OPENAI_API_KEY",
 }
 
 LITELLM_TEMPLATES: dict[Model, dict] = {
