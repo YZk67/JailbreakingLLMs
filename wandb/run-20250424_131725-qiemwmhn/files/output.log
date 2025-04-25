@@ -1,0 +1,182 @@
+Memory before: 424.0859375 MB
+Memory after: 430.90234375 MB
+
+[1;31mGive Feedback / Get Help: https://github.com/BerriAI/litellm/issues/new[0m
+LiteLLM.Info: If you need to debug this error, use `litellm.set_verbose=True'.
+
+
+[1;31mGive Feedback / Get Help: https://github.com/BerriAI/litellm/issues/new[0m
+LiteLLM.Info: If you need to debug this error, use `litellm.set_verbose=True'.
+
+
+[1;31mGive Feedback / Get Help: https://github.com/BerriAI/litellm/issues/new[0m
+LiteLLM.Info: If you need to debug this error, use `litellm.set_verbose=True'.
+
+
+[1;31mGive Feedback / Get Help: https://github.com/BerriAI/litellm/issues/new[0m
+LiteLLM.Info: If you need to debug this error, use `litellm.set_verbose=True'.
+
+
+[1;31mGive Feedback / Get Help: https://github.com/BerriAI/litellm/issues/new[0m
+LiteLLM.Info: If you need to debug this error, use `litellm.set_verbose=True'.
+
+
+[1;31mGive Feedback / Get Help: https://github.com/BerriAI/litellm/issues/new[0m
+LiteLLM.Info: If you need to debug this error, use `litellm.set_verbose=True'.
+
+
+[1;31mGive Feedback / Get Help: https://github.com/BerriAI/litellm/issues/new[0m
+LiteLLM.Info: If you need to debug this error, use `litellm.set_verbose=True'.
+
+
+[1;31mGive Feedback / Get Help: https://github.com/BerriAI/litellm/issues/new[0m
+LiteLLM.Info: If you need to debug this error, use `litellm.set_verbose=True'.
+
+
+[1;31mGive Feedback / Get Help: https://github.com/BerriAI/litellm/issues/new[0m
+LiteLLM.Info: If you need to debug this error, use `litellm.set_verbose=True'.
+
+
+[1;31mGive Feedback / Get Help: https://github.com/BerriAI/litellm/issues/new[0m
+LiteLLM.Info: If you need to debug this error, use `litellm.set_verbose=True'.
+
+
+[1;31mGive Feedback / Get Help: https://github.com/BerriAI/litellm/issues/new[0m
+LiteLLM.Info: If you need to debug this error, use `litellm.set_verbose=True'.
+
+
+[1;31mGive Feedback / Get Help: https://github.com/BerriAI/litellm/issues/new[0m
+LiteLLM.Info: If you need to debug this error, use `litellm.set_verbose=True'.
+
+
+[1;31mGive Feedback / Get Help: https://github.com/BerriAI/litellm/issues/new[0m
+LiteLLM.Info: If you need to debug this error, use `litellm.set_verbose=True'.
+
+
+[1;31mGive Feedback / Get Help: https://github.com/BerriAI/litellm/issues/new[0m
+LiteLLM.Info: If you need to debug this error, use `litellm.set_verbose=True'.
+
+
+[1;31mGive Feedback / Get Help: https://github.com/BerriAI/litellm/issues/new[0m
+LiteLLM.Info: If you need to debug this error, use `litellm.set_verbose=True'.
+
+
+[1;31mGive Feedback / Get Help: https://github.com/BerriAI/litellm/issues/new[0m
+LiteLLM.Info: If you need to debug this error, use `litellm.set_verbose=True'.
+
+
+[1;31mGive Feedback / Get Help: https://github.com/BerriAI/litellm/issues/new[0m
+LiteLLM.Info: If you need to debug this error, use `litellm.set_verbose=True'.
+
+
+[1;31mGive Feedback / Get Help: https://github.com/BerriAI/litellm/issues/new[0m
+LiteLLM.Info: If you need to debug this error, use `litellm.set_verbose=True'.
+
+
+[1;31mGive Feedback / Get Help: https://github.com/BerriAI/litellm/issues/new[0m
+LiteLLM.Info: If you need to debug this error, use `litellm.set_verbose=True'.
+
+
+[1;31mGive Feedback / Get Help: https://github.com/BerriAI/litellm/issues/new[0m
+LiteLLM.Info: If you need to debug this error, use `litellm.set_verbose=True'.
+
+
+[1;31mGive Feedback / Get Help: https://github.com/BerriAI/litellm/issues/new[0m
+LiteLLM.Info: If you need to debug this error, use `litellm.set_verbose=True'.
+Traceback (most recent call last):
+  File "C:\Users\Yi\AppData\Local\Programs\Python\Python312\Lib\site-packages\litellm\llms\vertex_ai.py", line 243, in completion
+    creds, _ = google.auth.default(quota_project_id=vertex_project)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Yi\AppData\Local\Programs\Python\Python312\Lib\site-packages\google\auth\_default.py", line 685, in default
+    raise exceptions.DefaultCredentialsError(_CLOUD_SDK_MISSING_CREDENTIALS)
+google.auth.exceptions.DefaultCredentialsError: Your default credentials were not found. To set up Application Default Credentials, see https://cloud.google.com/docs/authentication/external/set-up-adc for more information.
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\Yi\AppData\Local\Programs\Python\Python312\Lib\site-packages\litellm\main.py", line 1448, in completion
+    model_response = vertex_ai.completion(
+                     ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Yi\AppData\Local\Programs\Python\Python312\Lib\site-packages\litellm\llms\vertex_ai.py", line 528, in completion
+    raise VertexAIError(status_code=500, message=str(e))
+litellm.llms.vertex_ai.VertexAIError: Your default credentials were not found. To set up Application Default Credentials, see https://cloud.google.com/docs/authentication/external/set-up-adc for more information.
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\Yi\AppData\Local\Programs\Python\Python312\Lib\site-packages\litellm\utils.py", line 2228, in wrapper
+    result = original_function(*args, **kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Yi\AppData\Local\Programs\Python\Python312\Lib\site-packages\litellm\main.py", line 1873, in completion
+    raise exception_type(
+          ^^^^^^^^^^^^^^^
+  File "C:\Users\Yi\AppData\Local\Programs\Python\Python312\Lib\site-packages\litellm\utils.py", line 7029, in exception_type
+    raise e
+  File "C:\Users\Yi\AppData\Local\Programs\Python\Python312\Lib\site-packages\litellm\utils.py", line 6330, in exception_type
+    raise APIError(
+litellm.exceptions.APIError: VertexAIException - Your default credentials were not found. To set up Application Default Credentials, see https://cloud.google.com/docs/authentication/external/set-up-adc for more information.
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\vsCode\code\JailbreakingLLMs\main.py", line 217, in <module>
+    main(args)
+  File "D:\vsCode\code\JailbreakingLLMs\main.py", line 54, in main
+    judge_scores = judgeLM.score(adv_prompt_list, target_response_list)
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\vsCode\code\JailbreakingLLMs\judges.py", line 89, in score
+    raw_outputs = self.judge_model.batched_generate(convs_list,
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\vsCode\code\JailbreakingLLMs\language_models.py", line 76, in batched_generate
+    outputs = litellm.batch_completion(
+              ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Yi\AppData\Local\Programs\Python\Python312\Lib\site-packages\litellm\main.py", line 2035, in batch_completion
+    results = [future.result() for future in completions]
+               ^^^^^^^^^^^^^^^
+  File "C:\Users\Yi\AppData\Local\Programs\Python\Python312\Lib\concurrent\futures\_base.py", line 449, in result
+    return self.__get_result()
+           ^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Yi\AppData\Local\Programs\Python\Python312\Lib\concurrent\futures\_base.py", line 401, in __get_result
+    raise self._exception
+  File "C:\Users\Yi\AppData\Local\Programs\Python\Python312\Lib\concurrent\futures\thread.py", line 58, in run
+    result = self.fn(*self.args, **self.kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Yi\AppData\Local\Programs\Python\Python312\Lib\site-packages\litellm\utils.py", line 2296, in wrapper
+    return litellm.completion_with_retries(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Yi\AppData\Local\Programs\Python\Python312\Lib\site-packages\litellm\main.py", line 1905, in completion_with_retries
+    return retryer(original_function, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Yi\AppData\Local\Programs\Python\Python312\Lib\site-packages\tenacity\__init__.py", line 475, in __call__
+    do = self.iter(retry_state=retry_state)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Yi\AppData\Local\Programs\Python\Python312\Lib\site-packages\tenacity\__init__.py", line 376, in iter
+    result = action(retry_state)
+             ^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Yi\AppData\Local\Programs\Python\Python312\Lib\site-packages\tenacity\__init__.py", line 418, in exc_check
+    raise retry_exc.reraise()
+          ^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Yi\AppData\Local\Programs\Python\Python312\Lib\site-packages\tenacity\__init__.py", line 185, in reraise
+    raise self.last_attempt.result()
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Yi\AppData\Local\Programs\Python\Python312\Lib\concurrent\futures\_base.py", line 449, in result
+    return self.__get_result()
+           ^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Yi\AppData\Local\Programs\Python\Python312\Lib\concurrent\futures\_base.py", line 401, in __get_result
+    raise self._exception
+  File "C:\Users\Yi\AppData\Local\Programs\Python\Python312\Lib\site-packages\tenacity\__init__.py", line 478, in __call__
+    result = fn(*args, **kwargs)
+             ^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Yi\AppData\Local\Programs\Python\Python312\Lib\site-packages\litellm\utils.py", line 2325, in wrapper
+    raise e
+  File "C:\Users\Yi\AppData\Local\Programs\Python\Python312\Lib\site-packages\litellm\utils.py", line 2228, in wrapper
+    result = original_function(*args, **kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Yi\AppData\Local\Programs\Python\Python312\Lib\site-packages\litellm\main.py", line 1873, in completion
+    raise exception_type(
+          ^^^^^^^^^^^^^^^
+  File "C:\Users\Yi\AppData\Local\Programs\Python\Python312\Lib\site-packages\litellm\utils.py", line 7029, in exception_type
+    raise e
+  File "C:\Users\Yi\AppData\Local\Programs\Python\Python312\Lib\site-packages\litellm\utils.py", line 6330, in exception_type
+    raise APIError(
+litellm.exceptions.APIError: VertexAIException - Your default credentials were not found. To set up Application Default Credentials, see https://cloud.google.com/docs/authentication/external/set-up-adc for more information.

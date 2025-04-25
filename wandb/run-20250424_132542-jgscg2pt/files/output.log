@@ -1,0 +1,204 @@
+Memory before: 424.30859375 MB
+Memory after: 430.87890625 MB
+
+[1;31mGive Feedback / Get Help: https://github.com/BerriAI/litellm/issues/new[0m
+LiteLLM.Info: If you need to debug this error, use `litellm.set_verbose=True'.
+
+
+[1;31mGive Feedback / Get Help: https://github.com/BerriAI/litellm/issues/new[0m
+LiteLLM.Info: If you need to debug this error, use `litellm.set_verbose=True'.
+
+
+[1;31mGive Feedback / Get Help: https://github.com/BerriAI/litellm/issues/new[0m
+LiteLLM.Info: If you need to debug this error, use `litellm.set_verbose=True'.
+
+
+[1;31mGive Feedback / Get Help: https://github.com/BerriAI/litellm/issues/new[0m
+LiteLLM.Info: If you need to debug this error, use `litellm.set_verbose=True'.
+[1;31mGive Feedback / Get Help: https://github.com/BerriAI/litellm/issues/new[0m
+
+[1;31mGive Feedback / Get Help: https://github.com/BerriAI/litellm/issues/new[0m
+
+LiteLLM.Info: If you need to debug this error, use `litellm.set_verbose=True'.
+LiteLLM.Info: If you need to debug this error, use `litellm.set_verbose=True'.
+
+
+
+
+[1;31mGive Feedback / Get Help: https://github.com/BerriAI/litellm/issues/new[0m
+LiteLLM.Info: If you need to debug this error, use `litellm.set_verbose=True'.
+
+
+[1;31mGive Feedback / Get Help: https://github.com/BerriAI/litellm/issues/new[0m
+
+[1;31mGive Feedback / Get Help: https://github.com/BerriAI/litellm/issues/new[0mLiteLLM.Info: If you need to debug this error, use `litellm.set_verbose=True'.
+
+LiteLLM.Info: If you need to debug this error, use `litellm.set_verbose=True'.
+
+
+
+[1;31mGive Feedback / Get Help: https://github.com/BerriAI/litellm/issues/new[0m
+
+[1;31mGive Feedback / Get Help: https://github.com/BerriAI/litellm/issues/new[0m[1;31mGive Feedback / Get Help: https://github.com/BerriAI/litellm/issues/new[0m
+
+
+LiteLLM.Info: If you need to debug this error, use `litellm.set_verbose=True'.LiteLLM.Info: If you need to debug this error, use `litellm.set_verbose=True'.LiteLLM.Info: If you need to debug this error, use `litellm.set_verbose=True'.
+
+
+
+
+
+
+[1;31mGive Feedback / Get Help: https://github.com/BerriAI/litellm/issues/new[0m
+LiteLLM.Info: If you need to debug this error, use `litellm.set_verbose=True'.
+
+
+[1;31mGive Feedback / Get Help: https://github.com/BerriAI/litellm/issues/new[0m
+LiteLLM.Info: If you need to debug this error, use `litellm.set_verbose=True'.
+[1;31mGive Feedback / Get Help: https://github.com/BerriAI/litellm/issues/new[0m
+
+LiteLLM.Info: If you need to debug this error, use `litellm.set_verbose=True'.
+
+
+
+[1;31mGive Feedback / Get Help: https://github.com/BerriAI/litellm/issues/new[0m
+LiteLLM.Info: If you need to debug this error, use `litellm.set_verbose=True'.
+
+
+[1;31mGive Feedback / Get Help: https://github.com/BerriAI/litellm/issues/new[0m
+LiteLLM.Info: If you need to debug this error, use `litellm.set_verbose=True'.
+[1;31mGive Feedback / Get Help: https://github.com/BerriAI/litellm/issues/new[0m
+
+
+LiteLLM.Info: If you need to debug this error, use `litellm.set_verbose=True'.
+
+
+[1;31mGive Feedback / Get Help: https://github.com/BerriAI/litellm/issues/new[0m
+LiteLLM.Info: If you need to debug this error, use `litellm.set_verbose=True'.
+
+
+[1;31mGive Feedback / Get Help: https://github.com/BerriAI/litellm/issues/new[0m
+LiteLLM.Info: If you need to debug this error, use `litellm.set_verbose=True'.
+[1;31mGive Feedback / Get Help: https://github.com/BerriAI/litellm/issues/new[0m
+
+LiteLLM.Info: If you need to debug this error, use `litellm.set_verbose=True'.
+Traceback (most recent call last):
+  File "C:\Users\Yi\AppData\Local\Programs\Python\Python312\Lib\site-packages\litellm\llms\vertex_ai.py", line 282, in completion
+    llm_model = GenerativeModel(model)
+                ^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Yi\AppData\Local\Programs\Python\Python312\Lib\site-packages\vertexai\generative_models\_generative_models.py", line 430, in __init__
+    project = aiplatform_initializer.global_config.project
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Yi\AppData\Local\Programs\Python\Python312\Lib\site-packages\google\cloud\aiplatform\initializer.py", line 371, in project
+    raise ValueError(project_not_found_exception_str)
+ValueError: Unable to find your project. Please provide a project ID by:
+- Passing a constructor argument
+- Using vertexai.init()
+- Setting project using 'gcloud config set project my-project'
+- Setting a GCP environment variable
+- To create a Google Cloud project, please follow guidance at https://developers.google.com/workspace/guides/create-project
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\Yi\AppData\Local\Programs\Python\Python312\Lib\site-packages\litellm\main.py", line 1448, in completion
+    model_response = vertex_ai.completion(
+                     ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Yi\AppData\Local\Programs\Python\Python312\Lib\site-packages\litellm\llms\vertex_ai.py", line 528, in completion
+    raise VertexAIError(status_code=500, message=str(e))
+litellm.llms.vertex_ai.VertexAIError: Unable to find your project. Please provide a project ID by:
+- Passing a constructor argument
+- Using vertexai.init()
+- Setting project using 'gcloud config set project my-project'
+- Setting a GCP environment variable
+- To create a Google Cloud project, please follow guidance at https://developers.google.com/workspace/guides/create-project
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\Yi\AppData\Local\Programs\Python\Python312\Lib\site-packages\litellm\utils.py", line 2228, in wrapper
+    result = original_function(*args, **kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Yi\AppData\Local\Programs\Python\Python312\Lib\site-packages\litellm\main.py", line 1873, in completion
+    raise exception_type(
+          ^^^^^^^^^^^^^^^
+  File "C:\Users\Yi\AppData\Local\Programs\Python\Python312\Lib\site-packages\litellm\utils.py", line 7029, in exception_type
+    raise e
+  File "C:\Users\Yi\AppData\Local\Programs\Python\Python312\Lib\site-packages\litellm\utils.py", line 6297, in exception_type
+    raise BadRequestError(
+litellm.exceptions.BadRequestError: VertexAIException - Unable to find your project. Please provide a project ID by:
+- Passing a constructor argument
+- Using vertexai.init()
+- Setting project using 'gcloud config set project my-project'
+- Setting a GCP environment variable
+- To create a Google Cloud project, please follow guidance at https://developers.google.com/workspace/guides/create-project
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\vsCode\code\JailbreakingLLMs\main.py", line 217, in <module>
+    main(args)
+  File "D:\vsCode\code\JailbreakingLLMs\main.py", line 54, in main
+    judge_scores = judgeLM.score(adv_prompt_list, target_response_list)
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\vsCode\code\JailbreakingLLMs\judges.py", line 89, in score
+    raw_outputs = self.judge_model.batched_generate(convs_list,
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\vsCode\code\JailbreakingLLMs\language_models.py", line 76, in batched_generate
+    outputs = litellm.batch_completion(
+              ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Yi\AppData\Local\Programs\Python\Python312\Lib\site-packages\litellm\main.py", line 2035, in batch_completion
+    results = [future.result() for future in completions]
+               ^^^^^^^^^^^^^^^
+  File "C:\Users\Yi\AppData\Local\Programs\Python\Python312\Lib\concurrent\futures\_base.py", line 449, in result
+    return self.__get_result()
+           ^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Yi\AppData\Local\Programs\Python\Python312\Lib\concurrent\futures\_base.py", line 401, in __get_result
+    raise self._exception
+  File "C:\Users\Yi\AppData\Local\Programs\Python\Python312\Lib\concurrent\futures\thread.py", line 58, in run
+    result = self.fn(*self.args, **self.kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Yi\AppData\Local\Programs\Python\Python312\Lib\site-packages\litellm\utils.py", line 2296, in wrapper
+    return litellm.completion_with_retries(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Yi\AppData\Local\Programs\Python\Python312\Lib\site-packages\litellm\main.py", line 1905, in completion_with_retries
+    return retryer(original_function, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Yi\AppData\Local\Programs\Python\Python312\Lib\site-packages\tenacity\__init__.py", line 475, in __call__
+    do = self.iter(retry_state=retry_state)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Yi\AppData\Local\Programs\Python\Python312\Lib\site-packages\tenacity\__init__.py", line 376, in iter
+    result = action(retry_state)
+             ^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Yi\AppData\Local\Programs\Python\Python312\Lib\site-packages\tenacity\__init__.py", line 418, in exc_check
+    raise retry_exc.reraise()
+          ^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Yi\AppData\Local\Programs\Python\Python312\Lib\site-packages\tenacity\__init__.py", line 185, in reraise
+    raise self.last_attempt.result()
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Yi\AppData\Local\Programs\Python\Python312\Lib\concurrent\futures\_base.py", line 449, in result
+    return self.__get_result()
+           ^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Yi\AppData\Local\Programs\Python\Python312\Lib\concurrent\futures\_base.py", line 401, in __get_result
+    raise self._exception
+  File "C:\Users\Yi\AppData\Local\Programs\Python\Python312\Lib\site-packages\tenacity\__init__.py", line 478, in __call__
+    result = fn(*args, **kwargs)
+             ^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Yi\AppData\Local\Programs\Python\Python312\Lib\site-packages\litellm\utils.py", line 2325, in wrapper
+    raise e
+  File "C:\Users\Yi\AppData\Local\Programs\Python\Python312\Lib\site-packages\litellm\utils.py", line 2228, in wrapper
+    result = original_function(*args, **kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Yi\AppData\Local\Programs\Python\Python312\Lib\site-packages\litellm\main.py", line 1873, in completion
+    raise exception_type(
+          ^^^^^^^^^^^^^^^
+  File "C:\Users\Yi\AppData\Local\Programs\Python\Python312\Lib\site-packages\litellm\utils.py", line 7029, in exception_type
+    raise e
+  File "C:\Users\Yi\AppData\Local\Programs\Python\Python312\Lib\site-packages\litellm\utils.py", line 6297, in exception_type
+    raise BadRequestError(
+litellm.exceptions.BadRequestError: VertexAIException - Unable to find your project. Please provide a project ID by:
+- Passing a constructor argument
+- Using vertexai.init()
+- Setting project using 'gcloud config set project my-project'
+- Setting a GCP environment variable
+- To create a Google Cloud project, please follow guidance at https://developers.google.com/workspace/guides/create-project

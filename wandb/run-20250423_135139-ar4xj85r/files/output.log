@@ -1,0 +1,185 @@
+
+
+[1;31mGive Feedback / Get Help: https://github.com/BerriAI/litellm/issues/new[0m[1;31mGive Feedback / Get Help: https://github.com/BerriAI/litellm/issues/new[0m
+LiteLLM.Info: If you need to debug this error, use `litellm.set_verbose=True'.
+
+LiteLLM.Info: If you need to debug this error, use `litellm.set_verbose=True'.
+
+
+
+[1;31mGive Feedback / Get Help: https://github.com/BerriAI/litellm/issues/new[0m
+LiteLLM.Info: If you need to debug this error, use `litellm.set_verbose=True'.
+
+
+[1;31mGive Feedback / Get Help: https://github.com/BerriAI/litellm/issues/new[0m
+LiteLLM.Info: If you need to debug this error, use `litellm.set_verbose=True'.
+
+
+[1;31mGive Feedback / Get Help: https://github.com/BerriAI/litellm/issues/new[0m
+LiteLLM.Info: If you need to debug this error, use `litellm.set_verbose=True'.
+
+
+[1;31mGive Feedback / Get Help: https://github.com/BerriAI/litellm/issues/new[0m
+LiteLLM.Info: If you need to debug this error, use `litellm.set_verbose=True'.
+
+
+[1;31mGive Feedback / Get Help: https://github.com/BerriAI/litellm/issues/new[0m
+LiteLLM.Info: If you need to debug this error, use `litellm.set_verbose=True'.
+
+
+[1;31mGive Feedback / Get Help: https://github.com/BerriAI/litellm/issues/new[0m
+LiteLLM.Info: If you need to debug this error, use `litellm.set_verbose=True'.
+
+
+[1;31mGive Feedback / Get Help: https://github.com/BerriAI/litellm/issues/new[0m
+LiteLLM.Info: If you need to debug this error, use `litellm.set_verbose=True'.
+
+
+[1;31mGive Feedback / Get Help: https://github.com/BerriAI/litellm/issues/new[0m
+LiteLLM.Info: If you need to debug this error, use `litellm.set_verbose=True'.
+
+
+[1;31mGive Feedback / Get Help: https://github.com/BerriAI/litellm/issues/new[0m
+LiteLLM.Info: If you need to debug this error, use `litellm.set_verbose=True'.
+
+
+[1;31mGive Feedback / Get Help: https://github.com/BerriAI/litellm/issues/new[0m
+LiteLLM.Info: If you need to debug this error, use `litellm.set_verbose=True'.
+
+
+[1;31mGive Feedback / Get Help: https://github.com/BerriAI/litellm/issues/new[0m
+LiteLLM.Info: If you need to debug this error, use `litellm.set_verbose=True'.
+
+
+[1;31mGive Feedback / Get Help: https://github.com/BerriAI/litellm/issues/new[0m
+LiteLLM.Info: If you need to debug this error, use `litellm.set_verbose=True'.
+
+
+[1;31mGive Feedback / Get Help: https://github.com/BerriAI/litellm/issues/new[0m
+LiteLLM.Info: If you need to debug this error, use `litellm.set_verbose=True'.
+
+
+[1;31mGive Feedback / Get Help: https://github.com/BerriAI/litellm/issues/new[0m
+LiteLLM.Info: If you need to debug this error, use `litellm.set_verbose=True'.
+
+
+[1;31mGive Feedback / Get Help: https://github.com/BerriAI/litellm/issues/new[0m
+LiteLLM.Info: If you need to debug this error, use `litellm.set_verbose=True'.
+
+
+[1;31mGive Feedback / Get Help: https://github.com/BerriAI/litellm/issues/new[0m
+LiteLLM.Info: If you need to debug this error, use `litellm.set_verbose=True'.
+Traceback (most recent call last):
+  File "C:\Users\Yi\AppData\Local\Programs\Python\Python312\Lib\site-packages\litellm\main.py", line 1348, in completion
+    model_response = together_ai.completion(
+                     ^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Yi\AppData\Local\Programs\Python\Python312\Lib\site-packages\litellm\llms\together_ai.py", line 184, in completion
+    raise TogetherAIError(
+litellm.llms.together_ai.TogetherAIError: {
+  "id": "nrHgvru-4yUbBN-93503d82af7b5ec3-PDX",
+  "error": {
+    "message": "Unable to access non-serverless model lmsys/vicuna-13b-v1.5. Please visit https://api.together.ai/models/lmsys/vicuna-13b-v1.5 to create and start a new dedicated endpoint for the model.",
+    "type": "invalid_request_error",
+    "param": null,
+    "code": "model_not_available"
+  }
+}
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\Yi\AppData\Local\Programs\Python\Python312\Lib\site-packages\litellm\utils.py", line 2228, in wrapper
+    result = original_function(*args, **kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Yi\AppData\Local\Programs\Python\Python312\Lib\site-packages\litellm\main.py", line 1873, in completion
+    raise exception_type(
+          ^^^^^^^^^^^^^^^
+  File "C:\Users\Yi\AppData\Local\Programs\Python\Python312\Lib\site-packages\litellm\utils.py", line 7029, in exception_type
+    raise e
+  File "C:\Users\Yi\AppData\Local\Programs\Python\Python312\Lib\site-packages\litellm\utils.py", line 6997, in exception_type
+    raise APIConnectionError(
+litellm.exceptions.APIConnectionError: {
+  "id": "nrHgvru-4yUbBN-93503d82af7b5ec3-PDX",
+  "error": {
+    "message": "Unable to access non-serverless model lmsys/vicuna-13b-v1.5. Please visit https://api.together.ai/models/lmsys/vicuna-13b-v1.5 to create and start a new dedicated endpoint for the model.",
+    "type": "invalid_request_error",
+    "param": null,
+    "code": "model_not_available"
+  }
+}
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\vsCode\code\JailbreakingLLMs\main.py", line 217, in <module>
+    main(args)
+  File "D:\vsCode\code\JailbreakingLLMs\main.py", line 40, in main
+    extracted_attack_list = attackLM.get_attack(convs_list, processed_response_list)
+                            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\vsCode\code\JailbreakingLLMs\conversers.py", line 144, in get_attack
+    valid_outputs, new_adv_prompts = self._generate_attack(processed_convs_list, init_message)
+                                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\vsCode\code\JailbreakingLLMs\conversers.py", line 98, in _generate_attack
+    outputs_list = self.model.batched_generate(convs_subset,
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\vsCode\code\JailbreakingLLMs\language_models.py", line 76, in batched_generate
+    outputs = litellm.batch_completion(
+              ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Yi\AppData\Local\Programs\Python\Python312\Lib\site-packages\litellm\main.py", line 2035, in batch_completion
+    results = [future.result() for future in completions]
+               ^^^^^^^^^^^^^^^
+  File "C:\Users\Yi\AppData\Local\Programs\Python\Python312\Lib\concurrent\futures\_base.py", line 449, in result
+    return self.__get_result()
+           ^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Yi\AppData\Local\Programs\Python\Python312\Lib\concurrent\futures\_base.py", line 401, in __get_result
+    raise self._exception
+  File "C:\Users\Yi\AppData\Local\Programs\Python\Python312\Lib\concurrent\futures\thread.py", line 58, in run
+    result = self.fn(*self.args, **self.kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Yi\AppData\Local\Programs\Python\Python312\Lib\site-packages\litellm\utils.py", line 2296, in wrapper
+    return litellm.completion_with_retries(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Yi\AppData\Local\Programs\Python\Python312\Lib\site-packages\litellm\main.py", line 1905, in completion_with_retries
+    return retryer(original_function, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Yi\AppData\Local\Programs\Python\Python312\Lib\site-packages\tenacity\__init__.py", line 475, in __call__
+    do = self.iter(retry_state=retry_state)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Yi\AppData\Local\Programs\Python\Python312\Lib\site-packages\tenacity\__init__.py", line 376, in iter
+    result = action(retry_state)
+             ^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Yi\AppData\Local\Programs\Python\Python312\Lib\site-packages\tenacity\__init__.py", line 418, in exc_check
+    raise retry_exc.reraise()
+          ^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Yi\AppData\Local\Programs\Python\Python312\Lib\site-packages\tenacity\__init__.py", line 185, in reraise
+    raise self.last_attempt.result()
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Yi\AppData\Local\Programs\Python\Python312\Lib\concurrent\futures\_base.py", line 449, in result
+    return self.__get_result()
+           ^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Yi\AppData\Local\Programs\Python\Python312\Lib\concurrent\futures\_base.py", line 401, in __get_result
+    raise self._exception
+  File "C:\Users\Yi\AppData\Local\Programs\Python\Python312\Lib\site-packages\tenacity\__init__.py", line 478, in __call__
+    result = fn(*args, **kwargs)
+             ^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Yi\AppData\Local\Programs\Python\Python312\Lib\site-packages\litellm\utils.py", line 2325, in wrapper
+    raise e
+  File "C:\Users\Yi\AppData\Local\Programs\Python\Python312\Lib\site-packages\litellm\utils.py", line 2228, in wrapper
+    result = original_function(*args, **kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Yi\AppData\Local\Programs\Python\Python312\Lib\site-packages\litellm\main.py", line 1873, in completion
+    raise exception_type(
+          ^^^^^^^^^^^^^^^
+  File "C:\Users\Yi\AppData\Local\Programs\Python\Python312\Lib\site-packages\litellm\utils.py", line 7029, in exception_type
+    raise e
+  File "C:\Users\Yi\AppData\Local\Programs\Python\Python312\Lib\site-packages\litellm\utils.py", line 6997, in exception_type
+    raise APIConnectionError(
+litellm.exceptions.APIConnectionError: {
+  "id": "nrHgw2h-4yUbBN-93503d863baffff0-PDX",
+  "error": {
+    "message": "Unable to access non-serverless model lmsys/vicuna-13b-v1.5. Please visit https://api.together.ai/models/lmsys/vicuna-13b-v1.5 to create and start a new dedicated endpoint for the model.",
+    "type": "invalid_request_error",
+    "param": null,
+    "code": "model_not_available"
+  }
+}

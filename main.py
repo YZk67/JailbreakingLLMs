@@ -6,6 +6,8 @@ from common import process_target_response, initialize_conversations
 import psutil
 import os
 import time
+import vertexai
+from vertexai.generative_models import GenerativeModel
 def memory_usage_psutil():
     # Returns the memory usage in MB
     process = psutil.Process(os.getpid())
@@ -83,7 +85,7 @@ if __name__ == '__main__':
         default = "vicuna-13b-v1.5",
         help = "Name of attacking model.",
         choices=["vicuna-13b-v1.5", "llama-2-7b-chat-hf", "gpt-3.5-turbo-1106", "gpt-4-0125-preview", "claude-instant-1.2", "claude-2.1", "gemini-pro", 
-        "mixtral","vicuna-7b-v1.5"]
+        "mixtral","vicuna-7b-v1.5", "vicuna-local"]
     )
     parser.add_argument(
         "--attack-max-n-tokens",
@@ -104,7 +106,7 @@ if __name__ == '__main__':
         "--target-model",
         default = "vicuna-13b-v1.5", #TODO changed
         help = "Name of target model.",
-        choices=["vicuna-13b-v1.5", "llama-2-7b-chat-hf", "gpt-3.5-turbo-1106", "gpt-4-0125-preview", "claude-instant-1.2", "claude-2.1", "gemini-pro",]
+        choices=["vicuna-13b-v1.5", "llama-2-7b-chat-hf", "gpt-3.5-turbo-1106", "gpt-4-0125-preview", "claude-instant-1.2", "claude-2.1", "gemini-pro", "gpt-4o-mini", "mixtral", "gemini-1.5-flash-002", "vicuna-7b-v1.5"]
     )
     parser.add_argument(
         "--target-max-n-tokens",
@@ -131,7 +133,7 @@ if __name__ == '__main__':
         "--judge-model",
         default="gcg", #TODO changed
         help="Name of judge model. Defaults to the Llama Guard model from JailbreakBench.",
-        choices=["gpt-3.5-turbo-1106", "gpt-4-0125-preview","no-judge","jailbreakbench","gcg"]
+        choices=["gpt-3.5-turbo-1106", "gpt-4-0125-preview","no-judge","jailbreakbench","gcg", "gemini-1.5-flash-002", "gemini-pro"]
     )
     parser.add_argument(
         "--judge-max-n-tokens",

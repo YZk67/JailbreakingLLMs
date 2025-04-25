@@ -1,0 +1,26 @@
+Memory before: 581.42578125 MB
+Memory after: 587.4140625 MB
+
+[1;31mGive Feedback / Get Help: https://github.com/BerriAI/litellm/issues/new[0m
+LiteLLM.Info: If you need to debug this error, use `litellm.set_verbose=True'.
+
+
+[1;31mGive Feedback / Get Help: https://github.com/BerriAI/litellm/issues/new[0m
+LiteLLM.Info: If you need to debug this error, use `litellm.set_verbose=True'.
+
+
+[1;31mGive Feedback / Get Help: https://github.com/BerriAI/litellm/issues/new[0m
+LiteLLM.Info: If you need to debug this error, use `litellm.set_verbose=True'.
+Traceback (most recent call last):
+  File "D:\vsCode\code\JailbreakingLLMs\main.py", line 219, in <module>
+    main(args)
+  File "D:\vsCode\code\JailbreakingLLMs\main.py", line 56, in main
+    judge_scores = judgeLM.score(adv_prompt_list, target_response_list)
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\vsCode\code\JailbreakingLLMs\judges.py", line 89, in score
+    raw_outputs = self.judge_model.batched_generate(convs_list,
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\vsCode\code\JailbreakingLLMs\language_models.py", line 93, in batched_generate
+    api_key=self.api_key,
+            ^^^^^^^^^^^^
+AttributeError: 'APILiteLLM' object has no attribute 'api_key'

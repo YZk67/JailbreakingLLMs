@@ -1,0 +1,94 @@
+Traceback (most recent call last):
+  File "D:\vsCode\code\JailbreakingLLMs\main.py", line 219, in <module>
+    main(args)
+  File "D:\vsCode\code\JailbreakingLLMs\main.py", line 42, in main
+    extracted_attack_list = attackLM.get_attack(convs_list, processed_response_list)
+                            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\vsCode\code\JailbreakingLLMs\conversers.py", line 161, in get_attack
+    valid_outputs, new_adv_prompts = self._generate_attack(processed_convs_list, init_message)
+                                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\vsCode\code\JailbreakingLLMs\conversers.py", line 115, in _generate_attack
+    outputs_list = self.model.batched_generate(convs_subset,
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\vsCode\code\JailbreakingLLMs\judges.py", line 342, in batched_generate
+    result = self.pipe(
+             ^^^^^^^^^^
+  File "C:\Users\Yi\AppData\Local\Programs\Python\Python312\Lib\site-packages\transformers\pipelines\text_generation.py", line 287, in __call__
+    return super().__call__(text_inputs, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Yi\AppData\Local\Programs\Python\Python312\Lib\site-packages\transformers\pipelines\base.py", line 1379, in __call__
+    return self.run_single(inputs, preprocess_params, forward_params, postprocess_params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Yi\AppData\Local\Programs\Python\Python312\Lib\site-packages\transformers\pipelines\base.py", line 1386, in run_single
+    model_outputs = self.forward(model_inputs, **forward_params)
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Yi\AppData\Local\Programs\Python\Python312\Lib\site-packages\transformers\pipelines\base.py", line 1286, in forward
+    model_outputs = self._forward(model_inputs, **forward_params)
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Yi\AppData\Local\Programs\Python\Python312\Lib\site-packages\transformers\pipelines\text_generation.py", line 385, in _forward
+    output = self.model.generate(input_ids=input_ids, attention_mask=attention_mask, **generate_kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Yi\AppData\Local\Programs\Python\Python312\Lib\site-packages\torch\utils\_contextlib.py", line 116, in decorate_context
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Yi\AppData\Local\Programs\Python\Python312\Lib\site-packages\transformers\generation\utils.py", line 2465, in generate
+    result = self._sample(
+             ^^^^^^^^^^^^^
+  File "C:\Users\Yi\AppData\Local\Programs\Python\Python312\Lib\site-packages\transformers\generation\utils.py", line 3431, in _sample
+    outputs = self(**model_inputs, return_dict=True)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Yi\AppData\Local\Programs\Python\Python312\Lib\site-packages\torch\nn\modules\module.py", line 1739, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Yi\AppData\Local\Programs\Python\Python312\Lib\site-packages\torch\nn\modules\module.py", line 1750, in _call_impl
+    return forward_call(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Yi\AppData\Local\Programs\Python\Python312\Lib\site-packages\transformers\utils\generic.py", line 965, in wrapper
+    output = func(self, *args, **kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Yi\AppData\Local\Programs\Python\Python312\Lib\site-packages\transformers\utils\deprecation.py", line 172, in wrapped_func
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Yi\AppData\Local\Programs\Python\Python312\Lib\site-packages\transformers\models\llama\modeling_llama.py", line 821, in forward
+    outputs: BaseModelOutputWithPast = self.model(
+                                       ^^^^^^^^^^^
+  File "C:\Users\Yi\AppData\Local\Programs\Python\Python312\Lib\site-packages\torch\nn\modules\module.py", line 1739, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Yi\AppData\Local\Programs\Python\Python312\Lib\site-packages\torch\nn\modules\module.py", line 1750, in _call_impl
+    return forward_call(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Yi\AppData\Local\Programs\Python\Python312\Lib\site-packages\transformers\utils\generic.py", line 965, in wrapper
+    output = func(self, *args, **kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Yi\AppData\Local\Programs\Python\Python312\Lib\site-packages\transformers\models\llama\modeling_llama.py", line 571, in forward
+    layer_outputs = decoder_layer(
+                    ^^^^^^^^^^^^^^
+  File "C:\Users\Yi\AppData\Local\Programs\Python\Python312\Lib\site-packages\torch\nn\modules\module.py", line 1739, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Yi\AppData\Local\Programs\Python\Python312\Lib\site-packages\torch\nn\modules\module.py", line 1750, in _call_impl
+    return forward_call(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Yi\AppData\Local\Programs\Python\Python312\Lib\site-packages\transformers\models\llama\modeling_llama.py", line 334, in forward
+    hidden_states = self.mlp(hidden_states)
+                    ^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Yi\AppData\Local\Programs\Python\Python312\Lib\site-packages\torch\nn\modules\module.py", line 1739, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Yi\AppData\Local\Programs\Python\Python312\Lib\site-packages\torch\nn\modules\module.py", line 1750, in _call_impl
+    return forward_call(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Yi\AppData\Local\Programs\Python\Python312\Lib\site-packages\transformers\models\llama\modeling_llama.py", line 172, in forward
+    down_proj = self.down_proj(self.act_fn(self.gate_proj(x)) * self.up_proj(x))
+                                           ^^^^^^^^^^^^^^^^^
+  File "C:\Users\Yi\AppData\Local\Programs\Python\Python312\Lib\site-packages\torch\nn\modules\module.py", line 1739, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Yi\AppData\Local\Programs\Python\Python312\Lib\site-packages\torch\nn\modules\module.py", line 1750, in _call_impl
+    return forward_call(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Yi\AppData\Local\Programs\Python\Python312\Lib\site-packages\torch\nn\modules\linear.py", line 125, in forward
+    return F.linear(input, self.weight, self.bias)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+KeyboardInterrupt

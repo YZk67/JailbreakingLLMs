@@ -1,0 +1,15 @@
+{"time":"2025-04-23T13:30:32.3431637-07:00","level":"INFO","msg":"stream: starting","core version":"0.19.9","symlink path":"D:\\vsCode\\code\\JailbreakingLLMs\\wandb\\run-20250423_133032-d70qtis8\\logs\\debug-core.log"}
+{"time":"2025-04-23T13:30:32.594844-07:00","level":"INFO","msg":"created new stream","id":"d70qtis8"}
+{"time":"2025-04-23T13:30:32.594844-07:00","level":"INFO","msg":"stream: started","id":"d70qtis8"}
+{"time":"2025-04-23T13:30:32.594844-07:00","level":"INFO","msg":"handler: started","stream_id":"d70qtis8"}
+{"time":"2025-04-23T13:30:32.594844-07:00","level":"INFO","msg":"writer: Do: started","stream_id":"d70qtis8"}
+{"time":"2025-04-23T13:30:32.594844-07:00","level":"INFO","msg":"sender: started","stream_id":"d70qtis8"}
+{"time":"2025-04-23T13:30:32.7928336-07:00","level":"INFO","msg":"Starting system monitor"}
+{"time":"2025-04-23T13:30:37.055656-07:00","level":"INFO","msg":"stream: closing","id":"d70qtis8"}
+{"time":"2025-04-23T13:30:37.055656-07:00","level":"INFO","msg":"Stopping system monitor"}
+{"time":"2025-04-23T13:30:37.055656-07:00","level":"INFO","msg":"Stopped system monitor"}
+{"time":"2025-04-23T13:30:37.5515241-07:00","level":"INFO","msg":"fileTransfer: Close: file transfer manager closed"}
+{"time":"2025-04-23T13:30:37.7651707-07:00","level":"INFO","msg":"handler: closed","stream_id":"d70qtis8"}
+{"time":"2025-04-23T13:30:37.7651707-07:00","level":"INFO","msg":"writer: Close: closed","stream_id":"d70qtis8"}
+{"time":"2025-04-23T13:30:37.7651707-07:00","level":"INFO","msg":"sender: closed","stream_id":"d70qtis8"}
+{"time":"2025-04-23T13:30:37.7651707-07:00","level":"INFO","msg":"stream: closed","id":"d70qtis8"}

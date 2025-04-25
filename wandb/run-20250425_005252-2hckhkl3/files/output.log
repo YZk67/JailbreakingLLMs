@@ -1,0 +1,13 @@
+Traceback (most recent call last):
+  File "D:\vsCode\code\JailbreakingLLMs\main.py", line 219, in <module>
+    main(args)
+  File "D:\vsCode\code\JailbreakingLLMs\main.py", line 42, in main
+    extracted_attack_list = attackLM.get_attack(convs_list, processed_response_list)
+                            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\vsCode\code\JailbreakingLLMs\conversers.py", line 161, in get_attack
+    valid_outputs, new_adv_prompts = self._generate_attack(processed_convs_list, init_message)
+                                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\vsCode\code\JailbreakingLLMs\conversers.py", line 115, in _generate_attack
+    outputs_list = self.model.batched_generate(convs_subset,
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: 'LocalVicunaJudge' object has no attribute 'batched_generate'

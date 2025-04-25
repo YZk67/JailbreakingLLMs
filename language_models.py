@@ -3,6 +3,8 @@ import litellm
 from config import TOGETHER_MODEL_NAMES, LITELLM_TEMPLATES, API_KEY_NAMES, Model
 from loggers import logger
 from common import get_api_key
+import vertexai
+from vertexai.generative_models import GenerativeModel
 
 class LanguageModel():
     def __init__(self, model_name):
@@ -23,13 +25,25 @@ class APILiteLLM(LanguageModel):
 
     def __init__(self, model_name):
         super().__init__(model_name)
-        self.api_key = get_api_key(self.model_name)
+        if "gemini" in model_name.lower():
+            pass
+        else:
+            self.api_key = get_api_key(self.model_name)
         self.litellm_model_name = self.get_litellm_model_name(self.model_name)
+        if "gemini" in model_name.lower():
+            try:
+                import vertexai
+                vertexai.init(project="calm-producer-415907", location="us-central1")
+            except Exception as e:
+                print(f"[VertexAI Init Error] {e}")
         litellm.drop_params=True
         self.set_eos_tokens(self.model_name)
         
     def get_litellm_model_name(self, model_name):
-        if model_name in TOGETHER_MODEL_NAMES:
+        if model_name == "gemini-1.5-flash-002":
+            vertexai.init(project="your-project", location="us-central1")
+            model = GenerativeModel("gemini-1.5-flash-002")
+        elif model_name in TOGETHER_MODEL_NAMES:
             litellm_name = TOGETHER_MODEL_NAMES[model_name]
             self.use_open_source_model = True
         else:

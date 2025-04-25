@@ -4,6 +4,8 @@ from fastchat.model import get_conversation_template
 from system_prompts import get_attacker_system_prompts
 from config import API_KEY_NAMES
 import os 
+from config import Model
+#from enums import Model
 
 def extract_json(s):
     """
@@ -76,10 +78,18 @@ def initialize_conversations(n_streams: int, goal: str, target_str: str, attacke
     set_system_prompts(system_prompts, convs_list)
     return convs_list, processed_response_list, system_prompts
 
-def get_api_key(model):
+# def get_api_key(model):
+#     environ_var = API_KEY_NAMES[model]
+#     try:
+#         return os.environ[environ_var]  
+#     except KeyError:
+#         raise ValueError(f"Missing API key, for {model.value}, please enter your API key by running: export {environ_var}='your-api-key-here'")
+def get_api_key(model: Model):
+    if model not in API_KEY_NAMES:
+        return None  # ← 返回 None 代表本地模型
+
     environ_var = API_KEY_NAMES[model]
-    try:
-        return os.environ[environ_var]  
-    except KeyError:
-        raise ValueError(f"Missing API key, for {model.value}, please enter your API key by running: export {environ_var}='your-api-key-here'")
-        
+    if environ_var is None:
+        return None
+    return os.environ.get(environ_var)
+  

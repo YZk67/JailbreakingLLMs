@@ -1,7 +1,14 @@
 from common import get_api_key, conv_template, extract_json
 from language_models import APILiteLLM
 from config import FASTCHAT_TEMPLATE_NAMES, Model
+import logging
+#from judges import LocalVicunaJudge
+#from main import Args
+import importlib
 
+logger = logging.getLogger(__name__)
+from types import SimpleNamespace
+dummy_args = SimpleNamespace(judge_max_n_tokens=512, judge_temperature=0.7, goal="moderation", target_str="")
 
 def load_attack_and_target_models(args):
     # create attack model and target model
@@ -22,7 +29,17 @@ def load_attack_and_target_models(args):
     return attackLM, targetLM
 
 def load_indiv_model(model_name, local = False, use_jailbreakbench=True):
-    if use_jailbreakbench: 
+    if model_name == "vicuna-local" or model_name == Model.vicuna_local:
+        logger.info("Using LocalVicunaLLM for vicuna-local")
+        judges_module = importlib.import_module("judges")
+        LocalVicunaJudge = getattr(judges_module, "LocalVicunaJudge")
+        #LocalVicunaJudge = importlib.import_module("judges").LocalVicunaJudge
+        #dummy_args = Args(judge_max_n_tokens=512, judge_temperature=0.7, goal="moderation", target_str="")
+        model = LocalVicunaJudge(dummy_args)
+        model.use_open_source_model = True  # Set manually since it's expected elsewhere
+        model.post_message = ""  # Optionally set if needed by attack logic
+        return model  # Or pass actual args if needed
+    elif use_jailbreakbench: 
         if local:
             from jailbreakbench import LLMvLLM
             lm = LLMvLLM(model_name=model_name)
