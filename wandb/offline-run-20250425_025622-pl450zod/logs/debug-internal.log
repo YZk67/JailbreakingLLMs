@@ -1,0 +1,15 @@
+{"time":"2025-04-25T02:56:22.473129-07:00","level":"INFO","msg":"stream: starting","core version":"0.19.9","symlink path":"D:\\vsCode\\code\\JailbreakingLLMs\\wandb\\offline-run-20250425_025622-pl450zod\\logs\\debug-core.log"}
+{"time":"2025-04-25T02:56:22.5820602-07:00","level":"WARN","msg":"GraphQL client is nil, skipping feature loading"}
+{"time":"2025-04-25T02:56:22.5820602-07:00","level":"INFO","msg":"created new stream","id":"pl450zod"}
+{"time":"2025-04-25T02:56:22.5825899-07:00","level":"INFO","msg":"handler: started","stream_id":"pl450zod"}
+{"time":"2025-04-25T02:56:22.5825899-07:00","level":"INFO","msg":"stream: started","id":"pl450zod"}
+{"time":"2025-04-25T02:56:22.5825899-07:00","level":"INFO","msg":"sender: started","stream_id":"pl450zod"}
+{"time":"2025-04-25T02:56:22.5825899-07:00","level":"INFO","msg":"writer: Do: started","stream_id":"pl450zod"}
+{"time":"2025-04-25T02:56:22.5889499-07:00","level":"INFO","msg":"Starting system monitor"}
+{"time":"2025-04-25T02:56:25.5975227-07:00","level":"INFO","msg":"stream: closing","id":"pl450zod"}
+{"time":"2025-04-25T02:56:25.5975227-07:00","level":"INFO","msg":"Stopping system monitor"}
+{"time":"2025-04-25T02:56:25.5975227-07:00","level":"INFO","msg":"Stopped system monitor"}
+{"time":"2025-04-25T02:56:25.5975227-07:00","level":"INFO","msg":"handler: closed","stream_id":"pl450zod"}
+{"time":"2025-04-25T02:56:25.5975227-07:00","level":"INFO","msg":"writer: Close: closed","stream_id":"pl450zod"}
+{"time":"2025-04-25T02:56:25.5975227-07:00","level":"INFO","msg":"sender: closed","stream_id":"pl450zod"}
+{"time":"2025-04-25T02:56:25.5975227-07:00","level":"INFO","msg":"stream: closed","id":"pl450zod"}

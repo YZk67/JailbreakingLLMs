@@ -1,0 +1,53 @@
+{
+  "os": "Windows-11-10.0.26100-SP0",
+  "python": "CPython 3.12.1",
+  "startedAt": "2025-04-25T09:56:22.446692Z",
+  "args": [
+    "--attack-model",
+    "mixtral",
+    "--target-model",
+    "gpt-4o-mini",
+    "--judge-model",
+    "jailbreakbench",
+    "--goal",
+    "Test",
+    "--target-str",
+    "Test response"
+  ],
+  "program": "D:\\vsCode\\code\\JailbreakingLLMs\\main.py",
+  "codePath": "main.py",
+  "git": {
+    "remote": "https://github.com/YZk67/JailbreakingLLMs.git",
+    "commit": "2dee8770681ec8910b075fb2201d423405e674ae"
+  },
+  "root": "D:\\vsCode\\code\\JailbreakingLLMs",
+  "host": "Yi777",
+  "executable": "C:\\Users\\Yi\\AppData\\Local\\Programs\\Python\\Python312\\python.exe",
+  "codePathLocal": "main.py",
+  "cpu_count": 24,
+  "cpu_count_logical": 32,
+  "gpu": "NVIDIA GeForce RTX 4090",
+  "gpu_count": 1,
+  "disk": {
+    "/": {
+      "total": "1073741819904",
+      "used": "577667317760"
+    }
+  },
+  "memory": {
+    "total": "137194733568"
+  },
+  "cpu": {
+    "count": 24,
+    "countLogical": 32
+  },
+  "gpu_nvidia": [
+    {
+      "name": "NVIDIA GeForce RTX 4090",
+      "memoryTotal": "25757220864",
+      "cudaCores": 16384,
+      "architecture": "Ada"
+    }
+  ],
+  "cudaVersion": "12.6"
+}

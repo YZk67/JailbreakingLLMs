@@ -8,6 +8,7 @@ import os
 import time
 import vertexai
 from vertexai.generative_models import GenerativeModel
+os.environ["WANDB_MODE"] = "offline"
 def memory_usage_psutil():
     # Returns the memory usage in MB
     process = psutil.Process(os.getpid())
